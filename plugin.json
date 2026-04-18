@@ -1,0 +1,10 @@
+{
+    "name": "Author Box",
+    "slug": "author-box",
+    "version": "1.0.0",
+    "description": "Displays a card with the post author's avatar, bio, and social links below every post. Social links are managed from the author's profile page.",
+    "author": "Contensio",
+    "author_url": "https://contensio.com",
+    "requires_contensio": "2.0.0",
+    "provider": "Contensio\\Plugins\\AuthorBox\\AuthorBoxServiceProvider"
+}

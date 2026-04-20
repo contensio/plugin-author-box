@@ -1,6 +1,6 @@
 {
     "name": "contensio/plugin-author-box",
-    "description": "Author box plugin for Contensio — shows author avatar, bio, and social links below every post.",
+    "description": "Author box plugin for Contensio - shows author avatar, bio, and social links below every post.",
     "type": "contensio-plugin",
     "license": "MIT",
     "require": {

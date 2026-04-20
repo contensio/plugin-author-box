@@ -4,7 +4,7 @@
     "description": "Displays a card with the post author's avatar, bio, and social links below every post. Social links are managed from the author's profile page.",
     "author": "Contensio",
     "author_url": "https://contensio.com",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "provider": "Contensio\\Plugins\\AuthorBox\\AuthorBoxServiceProvider",
     "autoload": {
         "psr-4": {

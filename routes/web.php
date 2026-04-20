@@ -7,5 +7,5 @@ Route::middleware(['web', 'auth', 'contensio.admin'])
     ->prefix('account/profile')
     ->group(function () {
         Route::put('social-links', [SocialLinksController::class, 'update'])
-            ->name('author-box.social-links.update');
+            ->name('contensio-author-box.social-links.update');
     });

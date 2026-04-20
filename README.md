@@ -11,7 +11,7 @@ Displays a card with the post author's avatar, bio, and social links below every
 └─────────────────────────────────────────────────┘
 ```
 
-The box only appears when the author has a bio set on their profile. Social links are optional — only configured networks are shown.
+The box only appears when the author has a bio set on their profile. Social links are optional - only configured networks are shown.
 
 ---
 
@@ -33,7 +33,7 @@ composer require contensio/plugin-author-box
 
 Copy the plugin directory and register the service provider via the admin plugin manager.
 
-No migrations required — social links are stored in the core `user_meta` table.
+No migrations required - social links are stored in the core `user_meta` table.
 
 ---
 
@@ -55,7 +55,7 @@ Hook::add('contensio/frontend/post-after-content', function (Content $content, C
 
 The box is hidden if the post has no author or the author has no bio.
 
-### Admin — social links form
+### Admin - social links form
 
 Hooks into `contensio/admin/profile-sections` to append a "Social links" form card to every user's profile page (`/account/profile`).
 
@@ -65,7 +65,7 @@ Social links are saved to `user_meta` with keys prefixed `author_box_` (e.g. `au
 
 ## Avatar
 
-The plugin uses the author's `avatar_path` (uploaded via Admin > My Profile). If no avatar is uploaded, a coloured square with the author's initial is shown — matching the admin panel style.
+The plugin uses the author's `avatar_path` (uploaded via Admin > My Profile). If no avatar is uploaded, a coloured square with the author's initial is shown - matching the admin panel style.
 
 ---
 

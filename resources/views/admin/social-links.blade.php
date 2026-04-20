@@ -1,4 +1,4 @@
-<form method="POST" action="{{ route('author-box.social-links.update') }}">
+<form method="POST" action="{{ route('contensio-author-box.social-links.update') }}">
     @csrf @method('PUT')
     <div class="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
 

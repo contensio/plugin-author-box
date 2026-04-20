@@ -11,13 +11,15 @@ use Illuminate\Support\ServiceProvider;
 
 class AuthorBoxServiceProvider extends ServiceProvider
 {
+    protected string $ns = 'contensio-author-box';
+
     public function boot(): void
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'author-box');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', $this->ns);
 
         $this->registerRoutes();
 
-        // Inject author box below post content (priority 5 — renders before share buttons at 10)
+        // Inject author box below post content (priority 5 - renders before share buttons at 10)
         Hook::add('contensio/frontend/post-after-content', function (Content $content, ContentTranslation $translation): string {
             $author = $content->author;
 
@@ -27,13 +29,13 @@ class AuthorBoxServiceProvider extends ServiceProvider
 
             $socialLinks = AuthorProfile::socialLinks($author->id);
 
-            return view('author-box::partials.author-box', compact('author', 'socialLinks'))->render();
+            return view($this->ns . '::partials.author-box', compact('author', 'socialLinks'))->render();
         }, 5);
 
         // Add social links form to the profile page
         Hook::add('contensio/admin/profile-sections', function ($user): string {
             $socialLinks = AuthorProfile::socialLinks($user->id);
-            return view('author-box::admin.social-links', compact('user', 'socialLinks'))->render();
+            return view($this->ns . '::admin.social-links', compact('user', 'socialLinks'))->render();
         });
     }
 
